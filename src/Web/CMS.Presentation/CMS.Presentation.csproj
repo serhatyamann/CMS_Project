@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Web\Shared\CMS.Application\CMS.Application.csproj" />
-    <ProjectReference Include="..\src\Web\Shared\CMS.Infrastructure\CMS.Infrastructure.csproj" />
+    <ProjectReference Include="..\Shared\CMS.Application\CMS.Application.csproj" />
+    <ProjectReference Include="..\Shared\CMS.Infrastructure\CMS.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

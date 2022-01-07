@@ -16,7 +16,7 @@ namespace Client_Shop.Controllers
 
             using (var httpClient= new HttpClient())
             {
-                using var request = await httpClient.GetAsync("http://localhost:31516/api/Category");
+                using var request = await httpClient.GetAsync("http://localhost:64040/api/Category");
                 string response = await request.Content.ReadAsStringAsync();
 
                 categories = JsonConvert.DeserializeObject<List<Category>>(response);
@@ -35,7 +35,7 @@ namespace Client_Shop.Controllers
                 using (var httpClient = new HttpClient())
                 {
                     var content = new StringContent(JsonConvert.SerializeObject(category), Encoding.UTF8, "application/json");
-                    using var request = await httpClient.PostAsync("http://localhost:31516/api/Category", content);
+                    using var request = await httpClient.PostAsync("http://localhost:64040/api/Category", content);
                     return RedirectToAction("List");
                 }
             }
@@ -49,7 +49,7 @@ namespace Client_Shop.Controllers
 
             using (var httpClient = new HttpClient())
             {
-                using var request = await httpClient.GetAsync($"http://localhost:31516/api/Category/{id}");
+                using var request = await httpClient.GetAsync($"http://localhost:64040/api/Category/{id}");
                 string response = await request.Content.ReadAsStringAsync();
 
                 category = JsonConvert.DeserializeObject<Category>(response);
@@ -67,7 +67,7 @@ namespace Client_Shop.Controllers
                 using (var httpClient = new HttpClient())
                 {
                     var content = new StringContent(JsonConvert.SerializeObject(category), Encoding.UTF8, "application/json");
-                    using var request = await httpClient.PutAsync("http://localhost:31516/api/Category", content);
+                    using var request = await httpClient.PutAsync("http://localhost:64040/api/Category", content);
                 }
                 return RedirectToAction("List"); 
             }
@@ -79,7 +79,7 @@ namespace Client_Shop.Controllers
         {
             using (var httpClient = new HttpClient())
             {
-                using var request = await httpClient.DeleteAsync($"http://localhost:31516/api/Category/{id}");
+                using var request = await httpClient.DeleteAsync($"http://localhost:64040/api/Category/{id}");
             }
 
             return RedirectToAction("List");
