@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CMS.API</name>
+    </assembly>
+    <members>
+        <member name="M:CMS.API.Controllers.CategoryController.GetCategories">
+            <summary>
+            Get All Categories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.API.Controllers.CategoryController.GetCategoryById(System.Int32)">
+            <summary>
+            Get Category By Id
+            </summary>
+            <param name="id"> Id must be int </param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.API.Controllers.CategoryController.GetCategoryBySlug(System.String)">
+            <summary>
+            Get Category By Slug
+            </summary>
+            <param name="slug"> String Slug </param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.API.Controllers.CategoryController.CreateCategory(CMS.Application.Models.DTOs.CreateCategoryDTO)">
+            <summary>
+            Create A Category
+            </summary>
+            <param name="model">
+            Please check category model in scheme
+            </param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:CMS.API.Controllers.CategoryController.UpdateCategory(CMS.Application.Models.DTOs.UpdateCategoryDTO)">
+            <summary>
+            Update A Category. Slug Must Be Unique!
+            </summary>
+            <param name="model">
+            Please check category model in scheme
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
