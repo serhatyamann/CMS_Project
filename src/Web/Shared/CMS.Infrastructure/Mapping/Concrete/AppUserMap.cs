@@ -16,7 +16,6 @@ namespace CMS.Infrastructure.Mapping.Concrete
             builder.Property(x => x.Imagepath).IsRequired(false);
 
             base.Configure(builder);
-            base.Configure(builder);
         }
     }
 }
